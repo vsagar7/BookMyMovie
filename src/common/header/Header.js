@@ -128,7 +128,7 @@ const Header = ( props ) => {
         } else{
             let error = await response.json();
             setLoginApiError(error.message);
-            throw new Error("Something Went Wrong");
+            throw new Error("Something Went Wrong : "+loginApiError);
 
         }
         }).then((data) => {
